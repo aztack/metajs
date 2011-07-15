@@ -1,0 +1,58 @@
+{"namespaces"=>
+  {"BMap"=>
+    {"constants"=>
+      [{"name"=>"PI", "value"=>"3.14"},
+       {"name"=>"WM_PAINT", "value"=>"function (){return 'hello';}"},
+       {"flag"=>"var ", "name"=>"TWOPI", "value"=>"2*PI"}],
+     "variables"=>[],
+     "local"=>[],
+     "functions"=>[],
+     "modules"=>
+      {"M"=>
+        {"flag"=>"var ",
+         "functions"=>
+          {"test"=>
+            {"name"=>"test",
+             "body"=>"function (){\r\n\t\treturn \"test\";\r\n\t}",
+             "doc"=>"test it"},
+           "greeting"=>
+            {"name"=>"greeting",
+             "body"=>"function (){\r\n\t\treturn \"hello world\";\r\n\t}",
+             "doc"=>"say hello"}}}},
+     "interfaces"=>
+      {"I"=>
+        {"functions"=>
+          {"f1"=>{"name"=>"f1", "body"=>"function (){}", "doc"=>"f1's doc"},
+           "f2"=>{"name"=>"f2", "body"=>"function (){}", "doc"=>"f2's doc"}},
+         "doc"=>"The I interface",
+         "ctor"=>"function (x,y){}"}},
+     "classes"=>
+      {"Point"=>
+        {"doc"=>["point that contains ", "latitue/longitue value"],
+         "statics"=>
+          {"ORIGIN"=>
+            {"body"=>"{\"lat\":0,\"lng\":0}", "doc"=>"the origin point"},
+           "fromPixel"=>
+            {"name"=>"fromPixel",
+             "body"=>"function (encoded){\r\n\t\t\r\n\t}",
+             "doc"=>"get point from pixel on map"}},
+         "publics"=>
+          {"lat"=>
+            {"name"=>"lat",
+             "body"=>
+              "function (){\r\n\t\t//single line comment\r\n\t\treturn this._lat;\r\n\t}",
+             "doc"=>"return latitute of the point"},
+           "lng"=>
+            {"name"=>"lng",
+             "body"=>"function (){\r\n\t\treturn this._lng;\r\n\t}",
+             "doc"=>"return longitute of the point"}},
+         "privates"=>
+          {"lat"=>{"body"=>"0", "doc"=>"latitue"},
+           "lng"=>{"body"=>"0", "doc"=>"longitute"}},
+         "properties"=>{},
+         "implements"=>"I",
+         "extends"=>"B",
+         "include"=>["M"],
+         "ctor"=>
+          "function (lat,lng){\r\n\t\tthis._lat = lat || 0;\r\n\t\tthis._lng = lng || 0;\r\n\t}"}}}},
+ "description"=>["file description", "@fileOverview: some text"]}
